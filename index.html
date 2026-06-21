@@ -1,51 +1,37 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aplikasi Web</title>
-
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background: #fff;
-    }
-
-    iframe {
-      width: 100%;
-      height: 100vh;
-      border: 0;
-    }
-
-    .error {
-      padding: 20px;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memuat Aplikasi...</title>
+    <style>
+        /* Mengatur agar halaman memenuhi layar dan menghilangkan scrollbar bawaan */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; 
+            background-color: #ffffff;
+        }
+        
+        /* Mengatur iframe agar fullscreen dan responsif */
+        #gas-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+    </style>
 </head>
-
 <body>
 
-  <!-- Apps Script ditampilkan di dalam halaman -->
-  <iframe
-    src="https://script.google.com/macros/s/AKfycbxXl_SqH6oK5CLoLm-b1ubGiqCPk98CjwAuVYurjuCQ30eYBkIV2w6Tu6sN0AOLnwq5/exec"
-    allowfullscreen>
-  </iframe>
-
-  <!-- fallback kalau iframe diblok -->
-  <noscript>
-    <div class="error">
-      JavaScript tidak aktif. Klik untuk membuka aplikasi:<br><br>
-      <a href="https://script.google.com/macros/s/AKfycbxXl_SqH6oK5CLoLm-b1ubGiqCPk98CjwAuVYurjuCQ30eYBkIV2w6Tu6sN0AOLnwq5/exec">
-        Buka Aplikasi
-      </a>
-    </div>
-  </noscript>
+    <iframe id="gas-iframe" src="https://script.google.com/macros/s/AKfycbxXl_SqH6oK5CLoLm-b1ubGiqCPk98CjwAuVYurjuCQ30eYBkIV2w6Tu6sN0AOLnwq5/exec" allowfullscreen="true">
+        Browser Anda tidak mendukung iframe.
+    </iframe>
 
 </body>
 </html>
